@@ -96,8 +96,10 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #F1F1F3;
   text-decoration: none;
+  font-family: var(--font-mono);
+  font-weight: 900;
 }
 
 @media (prefers-color-scheme: dark) {
