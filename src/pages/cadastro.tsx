@@ -3,9 +3,9 @@ import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/Navbar';
 
 const Cadastro: React.FC = () => {
-  const logo = "/logo.png";
+  const logo = "/logo.svg";
   const links = [
-    { title: "Index", href: "/" },
+    { title: "Início", href: "/" },
     { title: "Carteira", href: "/carteira" },
     { title: "Cadastro", href: "/cadastro" },
     { title: "Suporte", href: "/suporte" },
@@ -15,7 +15,7 @@ const Cadastro: React.FC = () => {
     <>  
       <Head>
         <title>Cadastro</title>
-        <Navbar logo="images/logo.png" links={links} />
+        <Navbar logo="images/logo.svg" links={links} />
       </Head>   
       <main className={styles.main}>     
         <div className={styles.description}>              

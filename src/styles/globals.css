@@ -96,7 +96,7 @@ body {
 }
 
 a {
-  color: #F1F1F3;
+  color: hsl(240, 8%, 95%);
   text-decoration: none;
   font-family: var(--font-mono);
   font-weight: 900;

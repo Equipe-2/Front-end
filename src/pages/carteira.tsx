@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 const Carteira: React.FC = () => {
   const logo = "/logo.svg";
   const links = [
-    { title: "Home", href: "/" },
+    { title: "Início", href: "/" },
     { title: "Carteira", href: "/carteira" },
     { title: "Cadastro", href: "/cadastro" },
     { title: "Suporte", href: "/suporte" },
@@ -15,7 +15,7 @@ const Carteira: React.FC = () => {
     <>  
       <Head>
         <title>Minha Carteira</title>
-        <Navbar logo="images/logo.png" links={links} />
+        <Navbar logo="images/logo.svg" links={links} />
       </Head>   
       <main className={styles.main}>     
         <div className={styles.description}>              
