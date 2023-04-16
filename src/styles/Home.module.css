@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 3rem;
   min-height: 100vh;
@@ -19,14 +18,15 @@
   font-family: var(--font-mono);
 }
 
-/*
-.description a {
+.graph {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  flex-Direction: column;
+  align-Items: center;
+  justify-Content: center;
+  padding: 3rem;
 }
 
+/*
 .description p {
   position: relative;
   margin: 0;
