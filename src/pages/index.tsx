@@ -7,9 +7,9 @@ const Index: React.FC = () => {
   const logo = "images/logo.svg";
   const links = [
     { title: "Início", href: "/" },
-    { title: "Carteira", href: "/carteira" },
-    { title: "Cadastro", href: "/cadastro" },
-    { title: "Suporte", href: "/suporte" },
+    { title: "Carteira", href: "pages-franch/carteira" },
+    { title: "Cadastro", href: "pages-franch/cadastro" },
+    { title: "Suporte", href: "pages-franch/suporte" },
   ];
 
   return (

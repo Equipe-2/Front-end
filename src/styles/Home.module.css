@@ -14,7 +14,7 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  color: #444447;
+  color: #1a1a1a;
   font-family: var(--font-mono);
 }
 
@@ -34,7 +34,7 @@
   background-color: rgba(255, 255, 255, 0.6);
   padding: 15px;
   border-radius: 15px;
-  width: 33%;
+  width: 35%;
 }
 
 .centeredlegend {
@@ -93,14 +93,29 @@
   align-items: center;
 }
 
-/*
-button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
+.productTable{  
+  border-collapse: collapse;
+  border: 1px solid #1a1a1a;
+  margin: 20px 0 20px;
+  }
+
+.cellsTable{
+  padding: 3px;
+  border: 1px solid #1a1a1a;
+}  
+
+.tier{
+  margin: 10px 0 10px;
 }
-*/
+
+.metric{
+  margin: 10px 0 10px;
+}
+
+.regracomissao{
+  margin: 20px 0 10px;
+}
+
+.montantecomissao{
+  margin: 20px 0 10px;
+}
