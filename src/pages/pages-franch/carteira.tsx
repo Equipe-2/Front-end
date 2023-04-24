@@ -16,10 +16,14 @@ const products: Product[] = [
 
 const Carteira: React.FC = () => {
   const [tier, setTier] = useState<number>(1);
-  const [mrr, setMrr] = useState<number>();
-  const [mdr, setMdr] = useState<number>();
+  const [mrr, setMrr] = useState<number>(0);
+  const [mdr, setMdr] = useState<number>(0);
   const [saas, setSaas] = useState<number>();
   const [payments, setPayments] = useState<number>();
+  
+  const saasPercent = [0.16, 0.20, 0.25, 0.27, 0.29, 0.31, 0.33, 0.35, 0.38, 0.41];
+  const mdrPercent = 0.15;
+  const weightedAverage = (mrr * saasPercent[tier] + mdr * mdrPercent);
 
   const handleTierChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
@@ -34,16 +38,6 @@ const Carteira: React.FC = () => {
   const handleMdrChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
     setMdr(value);
-  };
-
-  const handleSaasChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = Number(event.target.value);
-    setSaas(value);
-  };
-
-  const handlePaymentsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = Number(event.target.value);
-    setPayments(value);
   };
 
   return (
@@ -61,53 +55,45 @@ const Carteira: React.FC = () => {
             <thead>
               <tr>
                 <th className={styles.cellsTable} align="left">ID</th>
-                <th className={styles.cellsTable}align="left">Produto</th>
-              </tr>
-            </thead>
-            <tbody>
-              {products.map((product) => (
-                <tr key={product.id}>
-                  <td className={styles.cellsTable}>{product.id}</td>
-                  <td className={styles.cellsTable}>{product.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className={styles.tier}>
-          <p>TIER:</p>
-          <input type="number" min="1" max="5" value={tier} onChange={handleTierChange} />
-        </div>
-        <div className={styles.metrics}>
-          <div className={styles.metric}>
-            <p>MRR:</p>
-            <input type="number" value={mrr} onChange={handleMrrChange} />
-          </div>
-          <div className={styles.metric}>
-            <p>MDR:</p>
-            <input type="number" value={mdr} onChange={handleMdrChange} />
-          </div>
-          <p className={styles.regracomissao}>Regra de Comissão:</p>
-          <div className={styles.metric}>
-            <p>%SaaS:</p>
-            <input type="number" value={saas} onChange={handleSaasChange} />
-          </div>
-          <div className={styles.metric}>
-            <p>%Payments:</p>
-            <input type="number" value={payments} onChange={handlePaymentsChange} />
-          </div>
-          <p className={styles.montantecomissao}>Montante da Comissão:</p>
-          </div>
-        </main>
+            <th className={styles.cellsTable}align="left">Produto</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((product) => (
+            <tr key={product.id}>
+              <td className={styles.cellsTable}>{product.id}</td>
+              <td className={styles.cellsTable}>{product.name}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div className={styles.tier}>
+      <p>TIER:</p>
+      <input type="number" min="0" max="9" value={tier} onChange={handleTierChange} />
+    </div>
+    <div className={styles.metrics}>
+      <div className={styles.metric}>
+        <p>MRR:</p>
+        <input type="number" value={mrr} onChange={handleMrrChange} />
+      </div>
+      <div className={styles.metric}>
+        <p>MDR:</p>
+        <input type="number" value={mdr} onChange={handleMdrChange} />
+      </div>
+      <p className={styles.montantecomissao}>Montante da Comissão:</p>
+      <input type="number" value={weightedAverage}></input>
+      </div>
+    </main>
     </>
   );
 };
 
-  const links = [
-  { title: "Início", href: "/" },
-  { title: "Carteira", href: "../pages-franch/carteira" },
-  { title: "Cadastro", href: "../pages-franch/cadastro" },
-  { title: "Suporte", href: "../pages-franch/suporte" },
-  ];
+const links = [
+{ title: "Início", href: "/" },
+{ title: "Carteira", href: "../pages-franch/carteira" },
+{ title: "Cadastro", href: "../pages-franch/cadastro" },
+{ title: "Suporte", href: "../pages-franch/suporte" },
+];
 
 export default Carteira;
