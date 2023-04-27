@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/Navbar';
 import Chart from '@/components/Chart';
+import Script from 'next/script';
 
 const Index: React.FC = () => {
   const logo = "images/logo.svg";
@@ -9,7 +10,6 @@ const Index: React.FC = () => {
     { title: "Início", href: "/" },
     { title: "Carteira", href: "pages-franch/carteira" },
     { title: "Cadastro", href: "pages-franch/cadastro" },
-    { title: "Suporte", href: "pages-franch/suporte" },
   ];
 
   return (
@@ -24,7 +24,16 @@ const Index: React.FC = () => {
         </div>
         <div className={styles.graph}>
           <Chart/>
-        </div>  
+        </div>
+        <Script id="freshdesk-widget" strategy="lazyOnload">
+          {`
+            window.fwSettings={
+              'widget_id':151000003330
+            };
+            !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
+          `}
+        </Script>
+        <Script src="https://widget.freshworks.com/widgets/151000003330.js" strategy="lazyOnload" />  
       </main>  
     </>
   );

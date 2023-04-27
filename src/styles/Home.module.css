@@ -146,5 +146,8 @@
 }
 
 .campo{
+  font-family: var(--font-mono);
+  font-size: 16px;
   margin: 20px 0 10px;
+  color: #1a1a1a;
 }
