@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
       <ul style={{ display: 'flex', listStyle: 'none', margin: 0 }}>
         {links.map((link) => (
         <li style={{ marginLeft: '1rem' }} key={link.href}>
-            <Link href={link.href}>
+            <Link href={link.href} style={{ fontFamily: 'Roboto Mono', fontSize: '18px' }}>
               {link.title}
             </Link>
         </li>

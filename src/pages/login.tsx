@@ -36,15 +36,15 @@ export default function Login() {
       <br></br>  
       <div className={styles.inputBox}>       
         <label className={styles.mylabel}>
-          Email 
-          <input type="email" value={email} className={styles.inputUser} onChange={(e) => setEmail(e.target.value)} />
+        <>Email </>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
       </div>
       <br></br>
       <div className={styles.inputBox}>
-      <label className={styles.mylabel}>
-        Senha 
-        <input type="password" value={password} className={styles.inputUser} onChange={(e) => setPassword(e.target.value)} />
+        <label className={styles.mylabel}>
+        <>Senha </>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
       </div>
       {error && <p>{error}</p>}

@@ -13,6 +13,8 @@ const products: Product[] = [
   { id: 1, name: "Módulo nota fiscal serviço" },
   { id: 2, name: "E-Commerce" },
   { id: 3, name: "Mini pos" },
+  { id: 4, name: "WhatsApp Profissional" },
+  { id: 5, name: "SalãoVip até 40 Profissionais" },
 ];
 
 const Carteira: React.FC = () => {

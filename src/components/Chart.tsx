@@ -2,13 +2,11 @@ import React, {Component} from 'react';
 import { BarChart, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const data = [
-  {name: 'Prod A', pv: 2400, amt: 2400},
-  {name: 'Prod B', pv: 1398, amt: 2210},
-  {name: 'Prod C', pv: 9800, amt: 2290},
-  {name: 'Prod D', pv: 3908, amt: 2000},
-  {name: 'Prod E', pv: 4800, amt: 2181},
-  {name: 'Prod F', pv: 3800, amt: 2500},
-  {name: 'Prod G', pv: 4300, amt: 2100},
+  {name: 'Prod 1', pv: 2500, amt: 2400},
+  {name: 'Prod 2', pv: 1400, amt: 2210},
+  {name: 'Prod 3', pv: 9800, amt: 2290},
+  {name: 'Prod 4', pv: 3900, amt: 2000},
+  {name: 'Prod 5', pv: 4800, amt: 2181},
 ];
 
 class SimpleLineChart extends Component {
