@@ -154,3 +154,10 @@
   margin: 20px 0 10px;
   color: #1a1a1a;
 }
+
+.gestorCartDrop{
+  font-size: 16px;
+  margin: 15px 0 10px;
+  color: #1a1a1a;
+  border: 1px solid #4525d1;
+}
