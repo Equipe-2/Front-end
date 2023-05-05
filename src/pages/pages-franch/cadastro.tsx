@@ -24,27 +24,27 @@ const Cadastro: React.FC = () => {
           <form>
             <div className={styles.campo}>
               <label htmlFor="nome">Nome </label>
-              <input id="nome" type="text" defaultValue="José da Silva" disabled />
+              <input id="nome" className={styles["input-bg"]} type="text" defaultValue="José da Silva" disabled />
             </div>
             <div className={styles.campo}>
               <label htmlFor="email">Email </label>
-              <input id="email" type="email" required />
+              <input id="email" className={styles["input-bg"]} type="email" defaultValue="jose_silva@email.com" required />
             </div>
             <div className={styles.campo}>
               <label htmlFor="cnpj">CNPJ </label>
-              <input id="cnpj" type="text" defaultValue="12.345.678/0001-00" disabled />
+              <input id="cnpj" className={styles["input-bg"]} type="text" defaultValue="12.345.678/0001-00" disabled />
             </div>
             <div className={styles.campo}>
               <label htmlFor="telefone">Número de telefone </label>
-              <input id="telefone" type="tel" required />
+              <input id="telefone" className={styles["input-bg"]} type="tel" defaultValue="(11) 99999-9999" required />
             </div>
             <div className={styles.campo}>
               <label htmlFor="endereco">Endereço </label>
-              <input id="endereco" type="text" required />
+              <input id="endereco" className={styles["input-bg"]} type="text" defaultValue="Av. Rudá, 3000" required />
             </div>
             <div className={styles.campo}>
               <label htmlFor="cidade">Cidade </label>
-              <input id="cidade" type="text" required />
+              <input id="cidade" className={styles["input-bg"]} type="text" defaultValue="São Paulo" required />
             </div>
             <div className={styles.buttoncontainerform}>
             <button type="submit" className={styles.buttonform}>Atualizar</button> 
