@@ -15,6 +15,12 @@ interface Franchisee {
   name: string;
 }
 
+const links = [
+  { title: "Início", href: "/admin" },
+  { title: "Franqueados", href: "../pages-gestor/franqueados" },
+  { title: "Cadastros", href: "../pages-gestor/cadastros" },
+];
+
 const franchisees: Franchisee[] = [
   { id: 1, name: "Franqueado 1" },
   { id: 2, name: "Franqueado 2" },
@@ -166,11 +172,4 @@ const Carteira: React.FC = () => {
   );
 };
 
-const links = [
-  { title: "Início", href: "/" },
-  { title: "Carteira", href: "../pages-franch/carteira" },
-  { title: "Cadastro", href: "../pages-franch/cadastro" },
-];
-
 export default Carteira;
-

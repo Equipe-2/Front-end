@@ -10,6 +10,12 @@ interface Product {
   client: string;
 }
 
+const links = [
+  { title: "Início", href: "/" },
+  { title: "Carteira", href: "../pages-franch/carteira" },
+  { title: "Cadastro", href: "../pages-franch/cadastro" },
+];
+
 const products: Product[] = [
   { id: 1, name: "Módulo nota fiscal serviço", client: "" },
   { id: 2, name: "E-Commerce", client: "" },
@@ -118,11 +124,5 @@ const Carteira: React.FC = () => {
     </>
   );
 };
-
-const links = [
-  { title: "Início", href: "/" },
-  { title: "Carteira", href: "../pages-franch/carteira" },
-  { title: "Cadastro", href: "../pages-franch/cadastro" },
-];
 
 export default Carteira;

@@ -6,9 +6,9 @@ import Script from 'next/script';
 const Cadastro: React.FC = () => {
   const logo = 'images/logo.svg';
   const links = [
-    { title: 'Início', href: '/' },
-    { title: 'Carteira', href: '../pages-franch/carteira' },
-    { title: 'Cadastro', href: '../pages-franch/cadastro' },
+    { title: "Início", href: "/admin" },
+    { title: "Franqueados", href: "../pages-gestor/franqueados" },
+    { title: "Cadastros", href: "../pages-gestor/cadastros" },
   ];
 
   return (
