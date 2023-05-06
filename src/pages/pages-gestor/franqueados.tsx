@@ -5,12 +5,6 @@ import styles from "@/styles/Home.module.css";
 import Script from "next/script";
 import Select, { ActionMeta } from "react-select";
 
-const links = [
-  { title: "Início", href: "/admin" },
-  { title: "Franqueados", href: "../pages-gestor/franqueados" },
-  { title: "Cadastros", href: "../pages-gestor/cadastros" },
-];
-
 interface Option {
   value: Franchisee;
   label: string;
@@ -22,11 +16,9 @@ interface Franchisee {
 }
 
 const franchisees: Franchisee[] = [
-  { id: 1, name: "Antônio Silveira" },
-  { id: 2, name: "José da Silva" },
-  { id: 3, name: "Maria Eduarda Fragoso" },
-  { id: 4, name: "Roberto Macedo" },
-  { id: 5, name: "Sílvio Aguiar" },
+  { id: 1, name: "Franqueado 1" },
+  { id: 2, name: "Franqueado 2" },
+  { id: 3, name: "Franqueado 3" },
 ];
 
 interface Product {
@@ -36,14 +28,14 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 1, name: "Módulo nota fiscal serviço", client: "Lojas Alpha" },
-  { id: 2, name: "E-Commerce", client: "Salão Female" },
-  { id: 3, name: "Mini pos", client: "Mini-mercado Astra" },
-  { id: 4, name: "WhatsApp Profissional", client: "Barbearia Alpha" },
-  { id: 5, name: "SalãoVip até 40 Profissionais", client: "Salão de Beleza Z" },
+  { id: 1, name: "Módulo nota fiscal serviço", client: "" },
+  { id: 2, name: "E-Commerce", client: "" },
+  { id: 3, name: "Mini pos", client: "" },
+  { id: 4, name: "WhatsApp Profissional", client: "" },
+  { id: 5, name: "SalãoVip até 40 Profissionais", client: "" },
 ];
 
-const Franqueados: React.FC = () => {
+const Carteira: React.FC = () => {
   const [tier, setTier] = useState<number>(1);
   const [mrr, setMrr] = useState<number>(0);
   const [mdr, setMdr] = useState<number>(0);
@@ -94,6 +86,7 @@ const Franqueados: React.FC = () => {
         </div>
         <div className={styles.gestorCartDrop}>
           <Select
+            className={styles.clientSelect}
             placeholder="Selecione o franqueado"
             options={franchiseeOptions}
             onChange={handleFranchiseeChange}
@@ -139,21 +132,20 @@ const Franqueados: React.FC = () => {
                 max="9"
                 value={tier}
                 onChange={handleTierChange}
-                className={styles["input-bg"]}
               />
             </div>
             <div className={styles.metrics}>
               {/* Inputs MRR, MDR e Montante da Comissão */}
               <div className={styles.metric}>
                 <p>MRR:</p>
-                <input type="number" className={styles["input-bg"]} value={mrr} onChange={handleMrrChange} />
+                <input type="number" value={mrr} onChange={handleMrrChange} />
               </div>
               <div className={styles.metric}>
                 <p>MDR:</p>
-                <input type="number" className={styles["input-bg"]} value={mdr} onChange={handleMdrChange} />
+                <input type="number" value={mdr} onChange={handleMdrChange} />
               </div>
               <p className={styles.montantecomissao}>Montante da Comissão:</p>
-              <input type="number" className={styles["input-bg"]} value={weightedAverage}></input>
+              <input type="number" value={weightedAverage}></input>
             </div>
           </>
         )}
@@ -174,4 +166,11 @@ const Franqueados: React.FC = () => {
   );
 };
 
-export default Franqueados;
+const links = [
+  { title: "Início", href: "/" },
+  { title: "Carteira", href: "../pages-franch/carteira" },
+  { title: "Cadastro", href: "../pages-franch/cadastro" },
+];
+
+export default Carteira;
+

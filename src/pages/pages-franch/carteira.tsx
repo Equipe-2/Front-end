@@ -10,18 +10,12 @@ interface Product {
   client: string;
 }
 
-const links = [
-  { title: "Início", href: "/" },
-  { title: "Carteira", href: "../pages-franch/carteira" },
-  { title: "Cadastro", href: "../pages-franch/cadastro" },
-];
-
 const products: Product[] = [
-  { id: 1, name: "Módulo nota fiscal serviço", client: "Lojas Alpha" },
-  { id: 2, name: "E-Commerce", client: "Salão Female" },
-  { id: 3, name: "Mini pos", client: "Mini-mercado Astra" },
-  { id: 4, name: "WhatsApp Profissional", client: "Barbearia Alpha" },
-  { id: 5, name: "SalãoVip até 40 Profissionais", client: "Salão de Beleza Z" },
+  { id: 1, name: "Módulo nota fiscal serviço", client: "" },
+  { id: 2, name: "E-Commerce", client: "" },
+  { id: 3, name: "Mini pos", client: "" },
+  { id: 4, name: "WhatsApp Profissional", client: "" },
+  { id: 5, name: "SalãoVip até 40 Profissionais", client: "" },
 ];
 
 const Carteira: React.FC = () => {
@@ -88,26 +82,25 @@ const Carteira: React.FC = () => {
         </div>
         <div className={styles.tier}>
           <p>TIER:</p>
-          <input 
+          <input
             type="number"
             min="0"
             max="9"
             value={tier}
             onChange={handleTierChange}
-            className={styles["input-bg"]}
           />
         </div>
         <div className={styles.metrics}>
           <div className={styles.metric}>
             <p>MRR:</p>
-            <input type="number" className={styles["input-bg"]} value={mrr} onChange={handleMrrChange} />
+            <input type="number" value={mrr} onChange={handleMrrChange} />
           </div>
           <div className={styles.metric}>
             <p>MDR:</p>
-            <input type="number" className={styles["input-bg"]} value={mdr} onChange={handleMdrChange} />
+            <input type="number" value={mdr} onChange={handleMdrChange} />
           </div>
           <p className={styles.montantecomissao}>Montante da Comissão:</p>
-          <input type="number" className={styles["input-bg"]} value={weightedAverage}></input>
+          <input type="number" value={weightedAverage}></input>
         </div>
         <Script id="freshdesk-widget" strategy="lazyOnload">
           {`
@@ -126,5 +119,10 @@ const Carteira: React.FC = () => {
   );
 };
 
+const links = [
+  { title: "Início", href: "/" },
+  { title: "Carteira", href: "../pages-franch/carteira" },
+  { title: "Cadastro", href: "../pages-franch/cadastro" },
+];
 
 export default Carteira;

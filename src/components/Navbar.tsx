@@ -12,7 +12,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ logo, links }) => {
   return (
-    <nav style={{ backgroundColor: '#2C91D4', display: 'flex', alignItems: 'center', padding: '1rem' }}>
+    <nav style={{ backgroundColor: '#0b49f2', display: 'flex', alignItems: 'center', padding: '1rem' }}>
       <img src={logo} alt="Logo" style={{ marginRight: 'auto' }} />
       <ul style={{ display: 'flex', listStyle: 'none', margin: 0 }}>
         {links.map((link) => (

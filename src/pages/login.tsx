@@ -59,18 +59,18 @@ export default function Login() {
 
     // deleteUser();
 
-    //async function createUser() {
-    //  axios.post(url[, data[, config]])
-    //  const res = await api.post("/user", {
-    //    email: "sx_coelho@yahoo.com.br",
-    //    password: "102030",
-    //    name: "Sandro",
-    //    role: "Franch"
-    //  })
-    //  console.log(res)
+    // async function createUser() {
+    //   // axios.post(url[, data[, config]])
+    //   const res = await api.post("/user", {
+    //     email: "sxcoelho@yahoo.com.br",
+    //     password: "102030",
+    //     name: "Sandro",
+    //     role: "Admin"
+    //   })
+    //   console.log(res)
     // }
 
-    //createUser()
+    // createUser()
 
     // async function updateUser() {
     //   const res = await api.patch("/user/2967f7f2-dac0-40b2-8de0-80ef837597b3", {
@@ -94,7 +94,7 @@ export default function Login() {
 
       const { token, user } = response.data;
 
-      setCookie(undefined, "my.token", token, {
+      setCookie(undefined, "sandro.token", token, {
         maxAge: 60 * 60 * 24 * 30,
         path: "/",
       });
