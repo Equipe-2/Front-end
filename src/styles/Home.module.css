@@ -58,8 +58,7 @@
   background-color: rgba(255, 255, 255, 0.6);
   padding: 15px;
   border-radius: 15px;
-  width: 40%;
-  background-color: #2C91D4;
+  width: 35%;
 }
 
 .centeredlegend {
@@ -103,7 +102,7 @@
 }
 
 .mybutton {
-  background-image: linear-gradient(to right, #b8795e, #b35932);
+  background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
   width: 30%;
   border: none;
   margin: 0 0 15px;
@@ -116,11 +115,11 @@
 }
 
 .mybutton:hover{
-  background-image: linear-gradient(to right, #61a6d4, #2C91D4);
+  background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
 }
 
 .buttonform {
-  background-image: linear-gradient(to right, rgb(0, 92, 197), #2C91D4);
+  background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
   width: 40%;
   border: none;
   margin: 0 0 15px;
@@ -133,7 +132,7 @@
 }
 
 .buttonform:hover{
-  background-image: linear-gradient(to right, #61a6d4, #2C91D4);
+  background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
 }
 
 .buttoncontainer{
@@ -151,11 +150,10 @@
 
 .productTable{  
   border-collapse: collapse;
-  border: 2px solid #1a1a1a;
+  border: 1px solid #1a1a1a;
   font-family: var('Roboto Mono');
   font-size: 16px;
   margin: 20px 0 20px;
-  background-color: #f8e8e0;
   }
 
 .cellsTable{
@@ -179,11 +177,6 @@
   margin: 10px 0 10px;
   font-family: var('Roboto Mono');
   font-size: 16px;
-}
-
-.input-bg {
-  background-color: #f8e8e0;
-  border: 1px solid #1a1a1a;
 }
 
 .metric{
@@ -219,7 +212,7 @@
   font-size: 16px;
   margin: 15px 0 10px;
   color: #1a1a1a;
-  border: 1px solid #2C91D4;
+  border: 1px solid #4525d1;
 }
 
 
